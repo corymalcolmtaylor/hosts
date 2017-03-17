@@ -28,7 +28,7 @@ if  cp ../hosts ./hosts_tmp.txt; then
         domain-needed" | sudo tee /etc/NetworkManager/dnsmasq.d/hosts.conf;
         sudo systemctl restart NetworkManager.service;
         sleep 2;
-        UUID=$(nmcli -t -f uuid c);
+        UUID=$(nmcli -t -f uuid c | tail -1);
         nmcli connection up uuid "$UUID";
     fi
 
