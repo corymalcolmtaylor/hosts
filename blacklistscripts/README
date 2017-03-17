@@ -1,0 +1,19 @@
+These scripts help you add your own blocked urls.
+usage:
+//used from the folder containing the script eg /Users/myname/Dev/hosts/blacklistscripts
+./fhosts.sh http://somebadurl.com/?ochaoeijfsdvmsijglbrs=fsv;lendr&c;lknr;ogr=s;lvnzer8h
+
+The script will copy the new hosts file to /etc/hosts and restart your network
+connection and therefore the the script uses sudo so you will need to enter
+your password while it runs.
+On linux it uses nmcli and takes the last uuid entry to be your preferred
+connection as that happens to be mine.
+
+If you use the chrome extension "link redirect trace" you can copy its trace
+to the clipboard and then paste the whole thing into the temp.urls file
+ - overwriting all that file's previous contents - and then use the ./b.sh script
+which calls the fhostsbatch.awk script to batch process the
+urls and then calls fhosts.sh  to copy the results and then recreates the temp.urls file.
+
+These scripts do not use the python scripts.  Perhaps as an added feature they will
+someday add the new urls to the ../blacklist file.
