@@ -12,8 +12,10 @@ if [ ! -z "$1" ]; then
     echo "0.0.0.0 $DOMAINX" >> "$EXTRAS";
     echo "appended 0.0.0.0 $DOMAINX to $EXTRAS";
     DOMAINZ=$(echo $DOMAINX | rev | cut -d"." -f 1,2 | rev);
-    echo "0.0.0.0 $DOMAINZ" >> "$EXTRAS";
-    echo "appended $DOMAINZ to $EXTRAS";
+    if [ "$DOMAINX" != "$DOMAINZ" ]; then
+        echo "0.0.0.0 $DOMAINZ" >> "$EXTRAS";
+        echo "appended $DOMAINZ to $EXTRAS";
+    fi
 fi
 if  cp ../hosts ./hosts_tmp.txt; then
     cat extrahosts >> hosts_tmp.txt;
