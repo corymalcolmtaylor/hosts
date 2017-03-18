@@ -4,7 +4,7 @@ LOS=$(uname);
 
 EXTRAS="extrahosts$LOS";
 
-echo "Extras file is $EXTRAS";
+echo "Extras file on this system is $EXTRAS";
 
 
 if [ ! -z "$1" ]; then
