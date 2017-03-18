@@ -21,7 +21,7 @@ if  cp ../hosts ./hosts_tmp.txt; then
     cat extrahosts >> hosts_tmp.txt;
     cat extrahostslinux >> hosts_tmp.txt;
     sudo cp hosts_tmp.txt /etc/hosts;
-    rm hosts_tmp.txt;
+    #rm hosts_tmp.txt;
     if [ "$LOS" = "Darwin" ]; then
         dscacheutil -flushcache; sudo killall -HUP mDNSResponder;
     elif [ "$LOS" = "Linux" ]; then
