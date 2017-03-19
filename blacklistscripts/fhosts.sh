@@ -6,6 +6,13 @@ EXTRAS="extrahosts$LOS";
 
 echo "Extras file on this system is $EXTRAS";
 
+if [ $LOS = "Darwin" ]; then
+	SECOND=$EXTRAS;
+	FIRST="extrahostsLinux";
+else
+	SECOND=$EXTRAS;
+        FIRST="extrahostsDarwin";
+fi
 
 if [ ! -z "$1" ]; then
     DOMAINX=$(echo $1 | cut -d"/" -f3 | cut -d":" -f1);
@@ -18,8 +25,8 @@ if [ ! -z "$1" ]; then
     fi
 fi
 if  cp ../hosts ./hosts_tmp.txt; then
-    cat extrahostsDarwin >> hosts_tmp.txt;
-    cat extrahostsLinux >> hosts_tmp.txt;
+    cat $FIRST >> hosts_tmp.txt;
+    cat $SECOND >> hosts_tmp.txt;
     sudo cp hosts_tmp.txt /etc/hosts;
     rm hosts_tmp.txt;
     if [ "$LOS" = "Darwin" ]; then
@@ -35,6 +42,7 @@ if  cp ../hosts ./hosts_tmp.txt; then
     fi
 
     echo "Hosts file updated";
+    tail /etc/hosts;
 else
     echo "No new hosts file found";
 fi
