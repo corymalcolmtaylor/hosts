@@ -25,6 +25,7 @@ if [ ! -z "$1" ]; then
     fi
 fi
 if  cp ../hosts ./hosts_tmp.txt; then
+    cat ../myhosts >> hosts_tmp.txt;
     cat $FIRST >> hosts_tmp.txt;
     cat $SECOND >> hosts_tmp.txt;
     sudo cp hosts_tmp.txt /etc/hosts;
