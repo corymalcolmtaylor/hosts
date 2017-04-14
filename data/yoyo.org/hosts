@@ -2,15 +2,15 @@
 #
 # For more information about this list, see: https://pgl.yoyo.org/adservers/
 # ----
-# last updated:   Tue, 14 Mar 2017 08:31:33 GMT
-# entries:        2353
+# last updated:   Thu, 23 Mar 2017 10:38:17 GMT
+# entries:        2348
 # format:         hosts (hosts -- in hosts file format)
 # credits:        Peter Lowe - pgl@yoyo.org - https://pgl.yoyo.org/ - https://twitter.com/pgl
 # this URL:       https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
 # other formats:  https://pgl.yoyo.org/adservers/formats.php
 # policy:         https://pgl.yoyo.org/adservers/policy.php
 #
-# start date:    Thu, 16 Mar 2017 00:00:00
+# start date:    Fri, 14 Apr 2017 00:00:00
 0.0.0.0 101com.com
 0.0.0.0 101order.com
 0.0.0.0 123found.com
@@ -121,7 +121,6 @@
 0.0.0.0 ad.leadbolt.net
 0.0.0.0 ad.liveinternet.ru
 0.0.0.0 ad.lupa.cz
-0.0.0.0 ad.m5prod.net
 0.0.0.0 ad.media-servers.net
 0.0.0.0 ad.mediastorm.hu
 0.0.0.0 ad.mgd.de
@@ -167,7 +166,6 @@
 0.0.0.0 ad1.kde.cz
 0.0.0.0 ad1.pamedia.com.au
 0.0.0.0 ad2.iinfo.cz
-0.0.0.0 ad2.ip.ro
 0.0.0.0 ad2.linxcz.cz
 0.0.0.0 ad2.lupa.cz
 0.0.0.0 ad2flash.com
@@ -456,7 +454,6 @@
 0.0.0.0 ads.gawker.com
 0.0.0.0 ads.geekswithblogs.net
 0.0.0.0 ads.glispa.com
-0.0.0.0 ads.globeandmail.com
 0.0.0.0 ads.gmodules.com
 0.0.0.0 ads.godlikeproductions.com
 0.0.0.0 ads.goyk.com
@@ -602,7 +599,6 @@
 0.0.0.0 ads.tahono.com
 0.0.0.0 ads.techtv.com
 0.0.0.0 ads.telegraph.co.uk
-0.0.0.0 ads.theglobeandmail.com
 0.0.0.0 ads.themovienation.com
 0.0.0.0 ads.thestar.com
 0.0.0.0 ads.timeout.com
@@ -659,7 +655,6 @@
 0.0.0.0 ads1.mediacapital.pt
 0.0.0.0 ads1.msn.com
 0.0.0.0 ads1.rne.com
-0.0.0.0 ads1.theglobeandmail.com
 0.0.0.0 ads1.virtual-nights.com
 0.0.0.0 ads10.speedbit.com
 0.0.0.0 ads180.com
@@ -1236,7 +1231,6 @@
 0.0.0.0 cpays.com
 0.0.0.0 cpmaffiliation.com
 0.0.0.0 cpmstar.com
-0.0.0.0 cpxadroit.com
 0.0.0.0 cpxinteractive.com
 0.0.0.0 cqcounter.com
 0.0.0.0 crakmedia.com
@@ -1462,7 +1456,6 @@
 0.0.0.0 hit.webcentre.lycos.co.uk
 0.0.0.0 hitbox.com
 0.0.0.0 hitcents.com
-0.0.0.0 hitexchange.net
 0.0.0.0 hitfarm.com
 0.0.0.0 hitiz.com
 0.0.0.0 hitlist.ru
@@ -1772,7 +1765,6 @@
 0.0.0.0 onlinecash.com
 0.0.0.0 onlinecashmethod.com
 0.0.0.0 onlinerewardcenter.com
-0.0.0.0 ooyala.com
 0.0.0.0 openad.tf1.fr
 0.0.0.0 openad.travelnow.com
 0.0.0.0 openads.friendfinder.com
@@ -1857,6 +1849,7 @@
 0.0.0.0 postrelease.com
 0.0.0.0 potenza.cz
 0.0.0.0 pr-star.de
+0.0.0.0 pr-ten.de
 0.0.0.0 praddpro.de
 0.0.0.0 prchecker.info
 0.0.0.0 precisioncounter.com
@@ -1918,6 +1911,7 @@
 0.0.0.0 ranking-links.de
 0.0.0.0 ranking-liste.de
 0.0.0.0 ranking-street.de
+0.0.0.0 rankingchart.de
 0.0.0.0 rankingscout.com
 0.0.0.0 rankyou.com
 0.0.0.0 rapidcounter.com
@@ -2090,6 +2084,8 @@
 0.0.0.0 suavalds.com
 0.0.0.0 subscribe.hearstmags.com
 0.0.0.0 sugoicounter.com
+0.0.0.0 sumo.com
+0.0.0.0 sumome.com
 0.0.0.0 superclix.de
 0.0.0.0 superstats.com
 0.0.0.0 supertop.ru
@@ -2176,7 +2172,6 @@
 0.0.0.0 track.adform.net
 0.0.0.0 track.anchorfree.com
 0.0.0.0 track.gawker.com
-0.0.0.0 track.happysitewriter.com
 0.0.0.0 trackalyzer.com
 0.0.0.0 tracker.icerocket.com
 0.0.0.0 tracker.marinsm.com
