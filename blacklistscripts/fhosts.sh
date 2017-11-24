@@ -43,9 +43,9 @@ if  cp ../hosts ./hosts_tmp.txt; then
         UUID=$(nmcli -t -f uuid c | tail -1);
         nmcli connection up uuid "$UUID";
     else #on windows
-				cp hosts_tmp.txt  newhosts
-		fi
-		rm hosts_tmp.txt;
+        cp hosts_tmp.txt  newhosts
+    fi
+    rm hosts_tmp.txt;
 
     echo "Hosts file updated";
     tail /etc/hosts;
