@@ -9,9 +9,9 @@ echo "Extras file on this system is $EXTRAS";
 if [ $LOS = "Darwin" ]; then
 	SECOND=$EXTRAS;
 	FIRST="extrahostsLinux";
-else
+else 	
 	SECOND=$EXTRAS;
-        FIRST="extrahostsDarwin";
+  FIRST="extrahostsDarwin";
 fi
 
 if [ ! -z "$1" ]; then
@@ -28,11 +28,13 @@ if  cp ../hosts ./hosts_tmp.txt; then
     cat ../myhosts >> hosts_tmp.txt;
     cat $FIRST >> hosts_tmp.txt;
     cat $SECOND >> hosts_tmp.txt;
-    sudo cp hosts_tmp.txt /etc/hosts;
-    rm hosts_tmp.txt;
+    #sudo cp hosts_tmp.txt /etc/hosts;
+    #rm hosts_tmp.txt;
     if [ "$LOS" = "Darwin" ]; then
+				sudo cp hosts_tmp.txt /etc/hosts;
         dscacheutil -flushcache; sudo killall -HUP mDNSResponder;
     elif [ "$LOS" = "Linux" ]; then
+	 		  sudo cp hosts_tmp.txt /etc/hosts;
         sudo /etc/init.d/dns-clean restart;
         echo "addn-hosts=/etc/hosts
         domain-needed" | sudo tee /etc/NetworkManager/dnsmasq.d/hosts.conf;
@@ -40,7 +42,10 @@ if  cp ../hosts ./hosts_tmp.txt; then
         sleep 2;
         UUID=$(nmcli -t -f uuid c | tail -1);
         nmcli connection up uuid "$UUID";
-    fi
+    else #on windows
+				cp hosts_tmp.txt  newhosts
+		fi
+		rm hosts_tmp.txt;
 
     echo "Hosts file updated";
     tail /etc/hosts;
