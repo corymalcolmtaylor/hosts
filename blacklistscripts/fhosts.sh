@@ -33,6 +33,7 @@ if  cp ../hosts ./hosts_tmp.txt; then
     if [ "$LOS" = "Darwin" ]; then
 				sudo cp hosts_tmp.txt /etc/hosts;
         dscacheutil -flushcache; sudo killall -HUP mDNSResponder;
+    		tail /etc/hosts;
     elif [ "$LOS" = "Linux" ]; then
 	 		  sudo cp hosts_tmp.txt /etc/hosts;
         sudo /etc/init.d/dns-clean restart;
@@ -42,13 +43,14 @@ if  cp ../hosts ./hosts_tmp.txt; then
         sleep 2;
         UUID=$(nmcli -t -f uuid c | tail -1);
         nmcli connection up uuid "$UUID";
+    		tail /etc/hosts;
     else #on windows
-        cp hosts_tmp.txt  newhosts
+        cp hosts_tmp.txt  /c/Windows/System32/drivers/etc/hosts
+				tail /c/Windows/System32/drivers/etc/hosts
     fi
     rm hosts_tmp.txt;
 
     echo "Hosts file updated";
-    tail /etc/hosts;
 else
     echo "No new hosts file found";
 fi
